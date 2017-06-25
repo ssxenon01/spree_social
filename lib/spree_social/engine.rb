@@ -40,7 +40,7 @@ module SpreeSocial
 
   def self.setup_key_for(provider, key, secret)
     Devise.setup do |config|
-      config.omniauth provider, key, secret, setup: true, scope: 'email, public_profile', info_fields: 'email, name, gender, first_name, last_name, age_range'
+      config.omniauth provider, key, secret, setup: true, scope: 'email, public_profile, user_birthday, user_about_me', info_fields: 'id,birthday,first_name,last_name,email,about,gender'
     end
   end
 end
